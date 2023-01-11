@@ -1,0 +1,14 @@
+.button-form {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background-color: #8c84de;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .button-form.active {
+    background-color: white;
+    color: #8c84de;
+  
+  }
