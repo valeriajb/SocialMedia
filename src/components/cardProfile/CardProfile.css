@@ -1,0 +1,24 @@
+
+/* 
+PorfileUser */
+.profile-user{ 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    gap: 20px;
+}
+
+
+.container-image-user{ 
+    width: 40px;
+    height: 40px;
+}
+.image-profile-user{ 
+    width: 100%;
+    border-radius: 50%;
+}
+.name-profile-user{ 
+    font-weight: 600;
+    cursor: pointer;
+}

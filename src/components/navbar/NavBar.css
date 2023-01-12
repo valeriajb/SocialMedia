@@ -1,0 +1,55 @@
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 3px 15px;
+}
+
+.container-left {
+    display: flex;
+    gap: 20px;
+    flex: 8;
+    align-items: center;
+}
+
+.logo-navBar {
+    font-size: 25px;
+    font-weight: 700;
+    color: #3A1F5D;
+    cursor: pointer;
+}
+.iconNav{ 
+    font-size: 18px;
+}
+.iconNavBar {
+    font-size:30px;
+}
+
+.container-search {
+    display: flex;
+    position: relative;
+    width: 400px;
+
+}
+
+.input-search {
+    width: 100%;
+    padding: 5px 30px;
+    border: solid 1px rgb(158, 158, 158);
+    border-radius: 5px;
+}
+
+.icon-search {
+    color: black;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+
+}
+
+.container-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 2;
+}

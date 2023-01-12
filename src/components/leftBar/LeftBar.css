@@ -1,0 +1,12 @@
+.container-bar{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px; 
+    padding: 20px;
+    background-color: white;
+}
+
+.title-container{
+    color: gray;
+}
