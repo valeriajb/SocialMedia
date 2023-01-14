@@ -9,14 +9,11 @@ PorfileUser */
     gap: 20px;
 }
 
-
-.container-image-user{ 
-    width: 40px;
-    height: 40px;
-}
 .image-profile-user{ 
-    width: 100%;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+    object-fit: cover;
 }
 .name-profile-user{ 
     font-weight: 600;
