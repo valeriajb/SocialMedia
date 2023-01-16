@@ -1,0 +1,38 @@
+.container-historyCards{ 
+    width: 800px;
+    display: flex;
+    gap: 10px;
+    margin: 5px;
+}
+
+
+.historyCard {
+    position: relative;
+}
+
+.image-historyCard {
+    width: 150px;
+    border-radius: 5%;
+}
+
+.stateHistory {
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle-more{ 
+    background-color: blue;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.iconAdd {
+    color: white;
+    font-size: 25px;
+}
+.spanName{ 
+    color: white;
+}

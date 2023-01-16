@@ -2,7 +2,6 @@ import Home from "./home/Home";
 import Profile from "./views/Profile/Profile";
 import Register from "./views/Register/Register";
 import Login from "./views/Login/Login";
-import Layout from "./views/Layout/Layout";
 import PrivateRouter from "./hooks/PrivateRouter";
 import { Routes, Route } from "react-router-dom";
 function App() {
@@ -12,7 +11,7 @@ function App() {
         path="/"
         element={
           <PrivateRouter>
-            <Layout />
+            <Home />
           </PrivateRouter>
         }>
         <Route path="profile/:id" element={<Profile />} />
