@@ -1,0 +1,10 @@
+.container-home{ 
+    margin: 0;
+    display: flex;
+    gap: 15px;
+
+}
+.container-left-home{ 
+    display: flex;
+    flex-direction: column;
+}

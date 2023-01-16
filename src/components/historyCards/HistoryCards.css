@@ -35,4 +35,5 @@
 }
 .spanName{ 
     color: white;
+    cursor: pointer;
 }

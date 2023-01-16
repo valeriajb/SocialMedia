@@ -1,23 +1,38 @@
 import React from "react";
 import "./CardProfile.css";
 
-function CardProfile({ srcImage="3", name="Jhon Doe"}) {
-
-   const boldWord = {
-    fontWeight: "600"
-  }
-  const thinWord={ 
-    fontWeight: "400"
-  }
+function CardProfile({
+  isTag,
+  element,
+  linkImage,
+  srcImage = "3",
+  name = "Jhon Doe",
+}) {
+  const boldWord = {
+    fontSize: "15px",
+  };
+  const thinWord = {
+    fontSize: "10px",
+    width: "120px",
+  };
 
   return (
-    <div className="profile-user">
-        <img
-          src={`/assets/${srcImage}.png`}
-          alt="Perfil"
-          className="image-profile-user"
-        />
-      <p className={"name-profile-user"}>{name}</p>
+    <div className="profile-user" style={isTag ? thinWord : boldWord}>
+      <img
+        src={linkImage ? linkImage : `/assets/${srcImage}.png`}
+        alt="Perfil"
+        style={
+          isTag
+            ? {
+                width: "20px",
+                height: "20px",
+              }
+            : {}
+        }
+        className="image-profile-user"
+      />
+      {element ? element : <p className={"name-profile-user"}>{name}</p>}
+      
     </div>
   );
 }

@@ -1,10 +1,22 @@
-import React from 'react';
-import "./Input.css"
+import React from "react";
+import "./Input.css";
 
-function Input({ type, placeholder }) {
+function Input({ type, placeholder, isComment }) {
   return (
-    <input type={type} className="input-item" placeholder={placeholder} />
-  )
+    <input
+      type={type}
+      className="input-item"
+      style={
+        isComment
+          ? {
+              borderBottomColor: "white",
+              width:"100%"
+            }
+          : {}
+      }
+      placeholder={placeholder}
+    />
+  );
 }
 
-export default Input
+export default Input;
