@@ -30,20 +30,27 @@ function Home() {
         <Layout />
          <div className="container-left-home">
           <LeftBar
+            follow={true}
             isBar={false}
+            listCard={dataProfile.filter((i) => i.id <= 2)}
+            profile={false}
+            isFollow={false}
+            title="Suggests For You"
           />
           <LeftBar
-            title="Your ShortCuts"
-            isBar={true}
+            title="Latest Activities"
+            isBar={false}
             listCard={dataProfile.filter((i) => 5 < i.id && i.id <= 10)}
           />
           <LeftBar
-            title="Others"
-            isBar={true}
+            title="Online Friends"
+            isBar={false}
             listCard={dataProfile.filter((i) => 10 < i.id && i.id <= 13)}
+            isOnline={true}
+            profile={false}
+            isFollow={false}
           />
         </div>
-
       </div>
 
       <Outlet />

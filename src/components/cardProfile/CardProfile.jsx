@@ -31,7 +31,7 @@ function CardProfile({
         }
         className="image-profile-user"
       />
-      {element ? element : <p className={"name-profile-user"}>{name}</p>}
+     {element ? element : <p className={"name-profile-user"}>{name}</p>}
       
     </div>
   );
