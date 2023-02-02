@@ -1,12 +1,16 @@
-import React from "react";
+import React,{useContext}from "react";
 import CardProfile from "../cardProfile/CardProfile";
 import Input from "../input/Input";
 import Button from '../button/Button';
+import {ContextDark} from '../../context/contextDark';
 import "./ShareComponent.css";
+import "../../DarkMode.css"
 
 function ShareComponent() {
+    const{currentMode}=useContext(ContextDark);
+
     return (
-        <div className="container-share">
+        <div className={"container-share "+ (currentMode && "dark")}>
             <div className="container-top">
                 <CardProfile
                     linkImage="/assets/login.jpg"

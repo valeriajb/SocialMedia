@@ -1,0 +1,75 @@
+:root {
+  --dark-bg-logo: white;
+  --dark-bg-color: #333;
+  --dark-text-color: whitesmoke;
+  --textColorSoft: lightgray;
+  --dark-border-color: #444;
+}
+.container-nav.dark {
+  background-color: var(--dark-bg-color);
+}
+.logo-navBar.dark {
+  color: var(--dark-bg-logo);
+}
+.iconNav.dark {
+  color: var(--dark-bg-logo);
+}
+.iconNavBar.dark {
+  color: var(--dark-bg-logo);
+}
+.icon-search.dark {
+  color: var(--dark-bg-logo);
+}
+.input-search.dark {
+  background-color: var(--dark-border-color);
+  border: var(--dark-border-color);
+  color: var(--dark-text-color);
+}
+
+.profile-user.dark {
+  background-color: var(--dark-bg-color);
+}
+.name-profile-user.dark {
+  color: var(--dark-text-color);
+}
+
+.container-left-home.dark {
+  background-color: var(--dark-bg-color);
+}
+.container-bar.dark {
+  background-color: var(--dark-bg-color);
+}
+.title-container.dark {
+  color: var(--textColorSoft);
+}
+
+.container-layout.dark {
+  background-color: var(--dark-border-color);
+}
+
+.container-share.dark {
+  background-color: var(--dark-bg-color);
+}
+
+.input-item.dark {
+  background-color: var(--dark-bg-color);
+  border: none;
+}
+
+.container-post.dark {
+  background-color: var(--dark-bg-color);
+}
+.text-post.dark {
+  color: var(--textColorSoft);
+}
+.container-left-home.dark {
+  background-color: var(--dark-bg-color);
+}
+
+.profile-user-activity.dark {
+  background-color: var(--dark-bg-color);
+}
+
+.name-profile-user.dark {
+  color: var(--dark-text-color);
+}

@@ -1,6 +1,8 @@
 import React from "react";
+import {ContextDark} from '../../context/contextDark';
+import { useContext } from "react";
 import "./CardProfile.css";
-
+import "../../DarkMode.css"
 function CardProfile({
   isTag,
   element,
@@ -15,9 +17,10 @@ function CardProfile({
     fontSize: "10px",
     width: "120px",
   };
-
+  const {currentMode}=useContext(ContextDark);
+  console.log(currentMode)
   return (
-    <div className="profile-user" style={isTag ? thinWord : boldWord}>
+    <div className={"profile-user "+ (currentMode && "dark")} style={isTag ? thinWord : boldWord}>
       <img
         src={linkImage ? linkImage : `/assets/${srcImage}.png`}
         alt="Perfil"
@@ -31,7 +34,7 @@ function CardProfile({
         }
         className="image-profile-user"
       />
-     {element ? element : <p className={"name-profile-user"}>{name}</p>}
+     {element ? element : <p className={"name-profile-user "+ (currentMode && "dark" )}>{name}</p>}
       
     </div>
   );

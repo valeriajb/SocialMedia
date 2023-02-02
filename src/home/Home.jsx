@@ -1,17 +1,20 @@
-import React from "react";
+import React, {useContext}from "react";
 import NavBar from "../components/navbar/NavBar";
 import { Outlet } from "react-router-dom";
 import { dataProfile } from "../hooks/DataCards";
 import LeftBar from "../components/leftBar/LeftBar";
 import Layout from "../views/Layout/Layout";
+import {ContextDark} from "../context/contextDark"
 import './Home.css'
-import { Routes, Route } from "react-router-dom";
+
 function Home() {
+  const{currentMode}=useContext(ContextDark);
+
   return (
     <>
       <NavBar />
       <div className="container-home">
-        <div className="container-left-home">
+        <div className={"container-left-home " + (currentMode && "dark")}>
           <LeftBar
             isBar={true}
             listCard={dataProfile.filter((i) => i.id <= 5)}
@@ -28,7 +31,7 @@ function Home() {
           />
         </div>
         <Layout />
-         <div className="container-left-home">
+         <div className={"container-left-home " +(currentMode && "dark")}>
           <LeftBar
             follow={true}
             isBar={false}
@@ -49,6 +52,7 @@ function Home() {
             isOnline={true}
             profile={false}
             isFollow={false}
+            srcImage="3"
           />
         </div>
       </div>

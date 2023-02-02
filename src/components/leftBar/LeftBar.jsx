@@ -1,9 +1,13 @@
 import React from "react";
 import "./LeftBar.css";
+import "../../DarkMode.css"
 import CardProfile from "../cardProfile/CardProfile";
 import ButtonFollow from "../buttonFollows/ButtonFollow";
 import CardActivity from "../cardActivity/CardActivity";
+import { ContextDark } from '../../context/contextDark';
+import { useContext } from "react";
 function LeftBar({ nameCard, srcImage, title, isBar, listCard, profile = true }, isFollow, isOnline) {
+  const { currentMode } = useContext(ContextDark)
   return (
     <div
       style={
@@ -16,9 +20,9 @@ function LeftBar({ nameCard, srcImage, title, isBar, listCard, profile = true },
             margin: "20px",
           }
       }
-      className="container-bar"
+      className={"container-bar " + (currentMode && "dark")}
     >
-      <label className="title-container">{title}</label>
+      <label className={"title-container " + (currentMode && "dark")}>{title}</label>
       <div className="cardFollow">
         {listCard ? (
           listCard.map((item) => (
@@ -26,7 +30,7 @@ function LeftBar({ nameCard, srcImage, title, isBar, listCard, profile = true },
               <CardActivity key={item.id} isOnline={isOnline} isFollow={isFollow} name={item.name} srcImage={item.id} />
           ))
         ) : (
-          profile ? <CardProfile name={nameCard} srcImage={srcImage} /> : <CardActivity name={nameCard} srcImage={srcImage}isOnline={isOnline} isFollow={isFollow} />
+          profile ? <CardProfile name={nameCard} srcImage={srcImage} /> : <CardActivity name={nameCard} srcImage={srcImage} isOnline={isOnline} isFollow={isFollow} />
         )}
 
       </div>

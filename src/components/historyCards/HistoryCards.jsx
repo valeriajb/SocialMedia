@@ -2,6 +2,7 @@ import React from "react";
 import "./HistoryCards.css";
 import { IoMdAdd } from "react-icons/io";
 
+
 function HistoryCards({ name, listImages }) {
   return (
     <div className="container-historyCards">
