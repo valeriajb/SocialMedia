@@ -4,16 +4,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { ContextDarkProvider } from './context/contextDark';
+import { ContextDarkProvider } from "./context/contextDark";
+import { UserContextProvider } from "./context/contextUser";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ContextDarkProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ContextDarkProvider>
+    <BrowserRouter>
+      <ContextDarkProvider>
+        <UserContextProvider>
+          <App />
+        </UserContextProvider>
+      </ContextDarkProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -20,6 +20,9 @@
 .icon-search.dark {
   color: var(--dark-bg-logo);
 }
+.iconPost.dark{
+  color: white;
+}
 .input-search.dark {
   background-color: var(--dark-border-color);
   border: var(--dark-border-color);
@@ -72,4 +75,8 @@
 
 .name-profile-user.dark {
   color: var(--dark-text-color);
+}
+.text-icons.dark{ 
+  color: var(--dark-text-color);
+  cursor: pointer;
 }

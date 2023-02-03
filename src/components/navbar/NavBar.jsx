@@ -9,11 +9,12 @@ import { BsMoonFill,BsFillSunFill } from "react-icons/bs";
 import CardProfile from '../cardProfile/CardProfile';
 import { useContext } from "react";
 import {ContextDark} from "../../context/contextDark"
+import {UserContext} from '../../context/contextUser'
 import "./NavBar.css"
 import "../../DarkMode.css"
 function NavBar() {
   const {  currentMode, changeCurrentMode}=useContext(ContextDark);
-
+  const {currentUser, changeUser} =useContext(UserContext)
   return (
     <div className={"container-nav " + ( currentMode && "dark" )}>
       <div className="container-left">
@@ -30,7 +31,7 @@ function NavBar() {
         <BiUser className={"iconNavBar "+ (currentMode && "dark" ) }/>
         <HiOutlineMail className={"iconNavBar "+ (currentMode && "dark" )} />
         <AiOutlineBell className={"iconNavBar "+ (currentMode && "dark" )} />
-        <CardProfile srcImage="1" name="Jhon Doe"/>
+        <CardProfile />
       </div>
     </div>
   );

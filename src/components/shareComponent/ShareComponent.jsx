@@ -15,7 +15,7 @@ function ShareComponent() {
                 <CardProfile
                     linkImage="/assets/login.jpg"
                     element={
-                        <Input isComment={true} placeholder="What´s on your mind John?" />
+                        <Input isComment={true} placeholder="What matter?" />
                     }
                 />
             </div>

@@ -13,3 +13,22 @@
     width: 90%;
 
 }
+.iconPost{ 
+    color: black;
+    font-size: 20px;
+}
+.container-icons{ 
+    display: flex;
+    gap:30px;
+    align-items: center;
+    padding: 10px 0;
+}
+.container{ 
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.text-icons{ 
+    color: black;
+}

@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import { dataProfile } from "../hooks/DataCards";
 import LeftBar from "../components/leftBar/LeftBar";
 import Layout from "../views/Layout/Layout";
+import Profile from '../views/Profile/Profile';
 import {ContextDark} from "../context/contextDark"
 import './Home.css'
 

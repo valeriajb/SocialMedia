@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useContext}from "react";
 import { Link } from "react-router-dom";
+import {UserContext} from '../../context/contextUser'
+
 import "./Button.css";
 
 function Button({ isTag, isActive, title, link }) {
-
+  const{currentUser, changeUser}=useContext(UserContext);
 
   return (
     <Link to={link}>

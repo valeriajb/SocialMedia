@@ -3,6 +3,7 @@ import {ContextDark} from '../../context/contextDark';
 import { useContext } from "react";
 import "./CardProfile.css";
 import "../../DarkMode.css"
+import { Link } from "react-router-dom";
 function CardProfile({
   isTag,
   element,
@@ -18,7 +19,6 @@ function CardProfile({
     width: "120px",
   };
   const {currentMode}=useContext(ContextDark);
-  console.log(currentMode)
   return (
     <div className={"profile-user "+ (currentMode && "dark")} style={isTag ? thinWord : boldWord}>
       <img

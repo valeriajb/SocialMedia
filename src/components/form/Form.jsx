@@ -40,7 +40,8 @@ function Form({ isLogin, titleForm, dataLogin, titleImage }) {
         <Button
           title={isLogin ? "Registrar" : "Ingresar"}
           isActive={true}
-          link="/login"
+          link="/"
+
         />
       </div>
     </div>
