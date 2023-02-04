@@ -13,9 +13,11 @@ function App() {
           <PrivateRouter>
             <Home />
           </PrivateRouter>
-        }>
+        }
+      >
         <Route path="profile/:id" element={<Profile />} />
       </Route>
+
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
     </Routes>

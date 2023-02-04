@@ -80,3 +80,37 @@
   color: var(--dark-text-color);
   cursor: pointer;
 }
+.containerProfile.dark{ 
+  background-color: var(--dark-border-color);
+}
+.infoUser.dark{ 
+  background-color: var(--dark-bg-color);
+}
+.nameUser.dark{ 
+  color: var(--dark-text-color);
+}
+.iconsocialMedia.dark{ 
+  color: var(--textColorSoft);
+}
+.iconLocation.dark{ 
+  color: var(--textColorSoft);
+}
+.iconMessage.dark{
+  color: var(--textColorSoft);
+}
+
+
+/* FormLogin */
+
+.form-left.dark { 
+  background-color: var(--dark-border-color);
+}
+.title-form.dark{ 
+  color: var(--dark-text-color);
+}
+.containerRegister.dark{ 
+  background-color: var(--dark-bg-color);
+}
+.containerLogin.dark{
+  background-color: var(--dark-bg-color);
+}

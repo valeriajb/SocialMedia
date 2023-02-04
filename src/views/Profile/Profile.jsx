@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../../components/button/Button";
+import PostComponent from "../../components/postComponent/PostComponent";
 import { FaFacebookF } from "react-icons/fa";
 import { AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
 import { BsTwitter, BsPinterest } from "react-icons/bs";
@@ -8,46 +9,53 @@ import { TfiWorld } from "react-icons/tfi";
 import { BiMessageDetail } from "react-icons/bi";
 import { CgMenuRight } from "react-icons/cg";
 import "./Profile.css";
+import "../../DarkMode.css"
+import CardUser from "../../components/CardUser";
+import {ContextDark} from "../../context/contextDark"
+import {UserContext} from "../../context/contextUser"
 function Profile() {
+  const{currentMode}=useContext(ContextDark)
+  const {currentUser}=useContext(UserContext)
   return (
-    <div className="containerProfile">
+    <div className={"containerProfile " +(currentMode && "dark") }>
       <img
         className="imagePortada"
         src="https://images.pexels.com/photos/461960/pexels-photo-461960.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
       ></img>
-      <div className="infoUser">
+      <img
+        className="image"
+        src={currentUser.src}
+      ></img>
+      <div className={"infoUser "+(currentMode && "dark")}>
         <div className="photoUser">
-          <img
-            className="image"
-            src="https://images.pexels.com/photos/14028501/pexels-photo-14028501.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-          ></img>
-          <h2>Jhon Doe</h2>
+          <h2 className={"nameUser "+(currentMode && "dark")}>{currentUser.name}</h2>
         </div>
         <div className="socialmedias">
           <div className="socialMedia">
-            <FaFacebookF className="iconsocialMedia" />
-            <AiOutlineInstagram className="iconsocialMedia" />
-            <BsTwitter className="iconsocialMedia" />
-            <AiFillLinkedin className="iconsocialMedia" />
-            <BsPinterest className="iconsocialMedia" />
+            <FaFacebookF className={"iconsocialMedia "+(currentMode && "dark") }/>
+            <AiOutlineInstagram className={"iconsocialMedia "+(currentMode && "dark") } />
+            <BsTwitter className={"iconsocialMedia "+(currentMode && "dark") } />
+            <AiFillLinkedin className={"iconsocialMedia "+(currentMode && "dark") }/>
+            <BsPinterest className={"iconsocialMedia "+(currentMode && "dark") } />
           </div>
           <div className="locationUser">
             <div className="itemLocation">
-              <HiLocationMarker className="iconLocation" />
-              <p>Colombia</p>
+              <HiLocationMarker className={"iconLocation "+(currentMode && "dark")} />
+              <p className={"nameUser "+(currentMode && "dark")}>Colombia</p>
             </div>
             <div className="itemLocation">
-              <TfiWorld className="iconLocation" />
-              <p>valeriaJ.com</p>
+              <TfiWorld className={"iconLocation "+(currentMode && "dark") }/>
+              <p className={"nameUser "+(currentMode && "dark")}>valeriaJ.com</p>
             </div>
           </div>
           <div className="container-message">
-            <BiMessageDetail className="iconMessage" />
-            <CgMenuRight className="iconMessage" />
+            <BiMessageDetail className={"iconMessage "+ (currentMode && "dark")} />
+            <CgMenuRight className={"iconMessage "+(currentMode && "dark")} />
           </div>
         </div>
-        <Button isTag={true} title="Follow" />
+        <Button className="btnProfile" isTag={true} title="Follow" />
       </div>
+      <PostComponent />
     </div>
   );
 }

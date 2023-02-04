@@ -1,5 +1,8 @@
 import React from "react";
 import {ContextDark} from '../../context/contextDark';
+import {UserContext} from '../../context/contextUser';
+
+
 import { useContext } from "react";
 import "./CardProfile.css";
 import "../../DarkMode.css"
@@ -19,6 +22,7 @@ function CardProfile({
     width: "120px",
   };
   const {currentMode}=useContext(ContextDark);
+  const {currentUser}=useContext(UserContext)
   return (
     <div className={"profile-user "+ (currentMode && "dark")} style={isTag ? thinWord : boldWord}>
       <img

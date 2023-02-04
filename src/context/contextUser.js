@@ -9,8 +9,8 @@ export function UserContextProvider({ children }) {
 
   const changeUser = () => {
     setcurrentUser({
-      id: 1,
-      name: "Valeria",
+      id: 22,
+      name: "Valeria Jiménez",
       src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29uYXxlbnwwfHwwfHw%3D&w=1000&q=80",
     });
   };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "../input/Input";
 import CardProfile from "../cardProfile/CardProfile";
 import Button from "../button/Button";
@@ -7,6 +7,7 @@ import "./Comments.css";
 import { useContext } from "react";
 function Comments() {
   const { currentMode } = useContext(ContextDark);
+
   return (
     <div className="comments">
       <div className="comment">
@@ -16,6 +17,8 @@ function Comments() {
         />
         <Button isTag={true} title="Send" />
       </div>
+      <>
+      </>
       <CardProfile
         element={
           <p className={"name-profile-user " + (currentMode && "dark")}>

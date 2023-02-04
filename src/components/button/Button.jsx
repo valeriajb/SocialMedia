@@ -4,12 +4,13 @@ import {UserContext} from '../../context/contextUser'
 
 import "./Button.css";
 
-function Button({ isTag, isActive, title, link }) {
+function Button({ isTag, isActive, title, link,clickBtn }) {
   const{currentUser, changeUser}=useContext(UserContext);
 
   return (
     <Link to={link}>
       <button
+        onClick={clickBtn?changeUser:null}
         style={
           isTag
             ? {

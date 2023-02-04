@@ -6,6 +6,7 @@ import LeftBar from "../components/leftBar/LeftBar";
 import Layout from "../views/Layout/Layout";
 import Profile from '../views/Profile/Profile';
 import {ContextDark} from "../context/contextDark"
+
 import './Home.css'
 
 function Home() {
@@ -31,7 +32,8 @@ function Home() {
             listCard={dataProfile.filter((i) => 10 < i.id && i.id <= 13)}
           />
         </div>
-        <Layout />
+        <Layout/>
+       
          <div className={"container-left-home " +(currentMode && "dark")}>
           <LeftBar
             follow={true}

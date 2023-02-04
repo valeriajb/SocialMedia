@@ -1,23 +1,24 @@
-import React, { useContext, useState } from "react";
-import CardProfile from "../cardProfile/CardProfile";
+import React, { useContext, useState, useEffect} from "react";
 import { ContextDark } from "../../context/contextDark";
+import { UserContext } from "../../context/contextUser";
 import "./PostComponent.css";
 import "../../DarkMode.css";
 import { BsHeart, BsFillShareFill } from "react-icons/bs";
 import { FcLike } from "react-icons/fc";
 import { BiCommentDetail } from "react-icons/bi";
 import Comments from "../comments/Comments";
-import { useEffect } from "react";
+import CardUser from "../CardUser"
 function PostComponent({
   image = "/assets/login.jpg",
   textMessage = "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 }) {
   const { currentMode } = useContext(ContextDark);
+  const{currentUser}=useContext(UserContext)
 
   return (
     <>
       <div className={"container-post " + (currentMode && "dark")}>
-        <CardProfile link="profile/:id" isTag={false} />
+        <CardUser currentUser={currentUser}/>
         <p className={"text-post " + (currentMode && "dark")}>{textMessage}</p>
         <img src={image} alt="" className="image-post" />
         <div className="container-icons">
@@ -40,7 +41,7 @@ function PostComponent({
             <p className={"text-icons " + (currentMode && "dark")}>Share</p>
           </div>
         </div>
-        <Comments />
+      
       </div>
     </>
   );
